@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="task_params">
+			<field
+				name="dry_run"
+				type="radio"
+				layout="joomla.form.field.radio.switcher"
+				label="PLG_TASK_REORDERMENUITEMS_FIELD_DRY_RUN_LABEL"
+				description="PLG_TASK_REORDERMENUITEMS_FIELD_DRY_RUN_DESC"
+				default="1"
+				filter="integer"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="source_menu"
+				type="radio"
+				layout="joomla.form.field.radio.switcher"
+				label="PLG_TASK_REORDERMENUITEMS_FIELD_SOURCE_MENU_LABEL"
+				description="PLG_TASK_REORDERMENUITEMS_FIELD_SOURCE_MENU_DESC"
+				default="1"
+				filter="integer"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="as_user"
+				type="user"
+				label="PLG_TASK_REORDERMENUITEMS_FIELD_AS_USER_LABEL"
+				description="PLG_TASK_REORDERMENUITEMS_FIELD_AS_USER_DESC"
+				filter="int"
+			/>
+		</fieldset>
+	</fields>
+</form>

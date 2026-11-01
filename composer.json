@@ -1,0 +1,45 @@
+{
+    "name": "yepr/reorder-menu-items",
+    "description": "A temporary Joomla task plugin that gives the translated main menus of the User Guide the ordering of the source menu",
+    "type": "joomla-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Herman Peeren",
+            "email": "herman@yepr.nl",
+            "homepage": "https://yepr.nl"
+        }
+    ],
+    "require": {
+        "php": ">=8.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpunit/phpunit": "^10.5 || ^11.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yepr\\Plugin\\Task\\ReorderMenuItems\\": "src/plugins/task/reordermenuitems/src/",
+            "Yepr\\Plugin\\Task\\ReorderMenuItems\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse",
+        "cs": "phpcs",
+        "cs-fix": "php-cs-fixer fix",
+        "cs-fix-dry": "php-cs-fixer fix --dry-run --diff",
+        "build": "php build/build.php",
+        "install-local": [
+            "@build",
+            "php tools/install-local.php"
+        ],
+        "verify": "php tools/verify-order.php"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
